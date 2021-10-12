@@ -1,0 +1,27 @@
+name: 'Composed of custom action'
+description: 'Composed of'
+runs:
+  using: "composite"
+  steps:
+    - run: echo Hello Nested Success
+      shell: bash
+      if: success()      
+      
+    - run: echo Hello Nested Fail
+      shell: bash
+      if: failure()
+      
+    - uses: hackathon-composite-actions/custom-action@main
+      shell: bash
+      
+    - run: echo Hello Nested Success
+      shell: bash
+      if: success()      
+      
+    - run: echo Hello Nested Fail
+      shell: bash
+      if: failure()
+      
+    - run: echo Hello Nested Always
+      shell: bash
+      if: always()
