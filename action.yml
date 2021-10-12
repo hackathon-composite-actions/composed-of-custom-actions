@@ -1,4 +1,4 @@
-name: 'Composed of custom action'
+name: 'Composed of a single custom action'
 description: 'Composed of'
 runs:
   using: "composite"
